@@ -1,16 +1,12 @@
-function myFunction(){
-  document.getElementById("myDropDown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+function setFloor(floorNum){
+  var imageSrc = "Images/tech" + floorNum + ".jpg";
+  <img id="MapPic" src="Images/tech1st.jpg">
+</div>
+<div class="Buttons">
+  <a href="RFHomePage.html">
+    <img class = "backButton" src="Images/back.jpg" alt="back button">
+  </a>
+  <a href="RF3rdPage.html">
+    <img class= "forwardButton" src="Images/forward.jpg" alr="forward button">
+  </a>
 }
