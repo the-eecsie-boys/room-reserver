@@ -1,0 +1,82 @@
+
+body{
+  /*background-color: #e2aeef;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.checkButton{
+  height: 50px;
+  width: 50px;
+}
+.cancelButton{
+  height: 50px;
+  width: 50px;
+}
+.backButton{
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.forwardButton{
+  height: 50px;
+  width: 50px;
+  margin-left: 550px;
+}
+.CloseMapPic{
+  width: 150%
+}
+.MapBut{
+  position: relative;
+  left:-600px;
+  width:100px;
+  height: 175px;
+  background-color: Transparent;
+  top:-85px;
+  border: none;
+  outline: none;
+}
+.MapBut:hover{
+  background-color: yellow;
+}
