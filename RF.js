@@ -1,5 +1,5 @@
 function setFloor(floorNum){
-  var imageSrc = "Images/tech" + floorNum + ".jpg";
+  var imageSrc = "images/tech" + floorNum + ".jpg";
   var mapDivHTML = `<img id="MapPic" usemap="#floorMap" width="100%" src="${imageSrc}">`;
   if(floorNum == 1){
     mapDivHTML += `<map name="floorMap">
