@@ -65,6 +65,8 @@ h1{
   font-size: 18px;
 }
 .Biz{
+  position: relative;
+  top:-5px;
   margin: 5px;
   padding: 0px;
 }
@@ -85,9 +87,16 @@ h1{
   float: left;
   color: white;
   font-size: 19px;
+  border-radius: 20px;
 
 }
-
+.buttons{
+  position: relative;
+  top:110px;
+}
 #Rooms{
   font-size: 22px;
+  font-weight: bold;
+  ;position: relative;
+  top:5px;
 }
