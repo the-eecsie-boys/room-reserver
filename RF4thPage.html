@@ -1,37 +1,41 @@
 <html>
 <head class = "header">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="RF.css"/>
+  <link href="hide-show-fields-form.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="RF.js"></script>
-<title> Room Finder </title>
+  <script src="hide-show-fields-form.js"></script>
+  <title> Room Finder </title>
 </head>
 
 <body>
-<div class= "Whole Screen">
-  Please Fill out the Form Below
-  <div class= "Name">Name
-    <form>
-      <input type="text" name="StuName">
-    </form>
-  </div>
-  <div class= "ID">Student ID
-    <form>
-      <input type="text" name="StuID">
-    </form>
-  </div>
-  <div class= "Orgo">If Applicable, Student Organization
-    <form>
-      <input type="text" name="Org">
-    </form>
-  </div>
-  <div class= "check">
-  <a href="RF5thPage.html">
-    <img class= "checkButton" src="images/CheckButton.jpg" alt="Check Button">
-  </a>
-  </div>
-  <div>
-  <a href="RFHomePage.html">
-    <img class= "cancelButton" src="images/Xbutton.png" alt="cancel button">
-  </a>
-  </div>
-</div>
+  <h1>Reservation Form</h1>
+  <form action="RF5thPage.html">
+    <p>Please fill out the form below</p>
+    <div class="form-group">
+      <label for="Name">Name:</label>
+      <input required type="text" pattern="[A-Za-z ]{1,}" class="form-control" id="Name">
+    </div>
+    <div class="form-group">
+      <label for="StudentID">Student ID:</label>
+      <input required pattern="[0-9]{7}"type="text" class="form-control" id="StuID">
+    </div>
+    <div class="form-group">
+      <label for="InOrg">Are you in a student organization?</label><br>
+      <select required class="form-control" id="OrgMaybe">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </div>
+    <div class="form-group" id="StuOrgDiv">
+      <label for="TheOrg">If applicable enter organization name:</label>
+      <input type="text" class="form-control" id="StuOrg">
+    </div>
+    <button type="submit" class="btn btn-success btn-block">Confirm</button>
+  </form>
+  <button type="button" class="btn btn-primary btn-block" onclick="window.location.href='RF3rdPage.html'">Back</button>
 </body>
