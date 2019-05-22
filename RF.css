@@ -77,3 +77,11 @@ h1{
 #backBtn{
   margin-top: 2px;
 }
+
+.hidden-default{
+  display: none;
+}
+
+.nice-top-margin{
+  margin-top: 35px;
+}

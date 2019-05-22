@@ -40,16 +40,3 @@ function changeReservations(){
 
   rev.innerHTML = "Your room, " + room + ", is reserved from " + time + " to " + time + " on " + date;
 }
-
-//trying to get the org name to pop up if clicked yes
-$("#OrgMaybe").change(function(){
-  if ($(this).val() == "yes"){
-    $('#StuOrgDiv').show();
-    $('#StuOrg').attr('required','');
-  }
-  else{
-    $('#StuOrgDiv').hide();
-    $('#StuOrg').removeAttr('required','');
-  }
-});
-$("#OrgMaybe").trigger("change");
