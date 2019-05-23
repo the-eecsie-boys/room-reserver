@@ -49,54 +49,43 @@ h1{
 
 .room-info-wing-closeup-header{
   text-align: center;
+  cursor: pointer;
+}
+
+.room-info-wing-closeup-header:hover{
+  background-color: #0067d6;
 }
 
 .OpenRooms{
   margin-left: 5px;
   width: 30%;
   display: inline-block;
+  cursor: default;
 }
 
-#OpenRooms ul{
-  list-style: none;
-}
-
-#OpenRooms .TimeFrame{
-  font-size: 18px;
-}
-.Biz{
-  position: relative;
-  top:-5px;
-  margin: 5px;
-  padding: 0px;
-}
-#OpenRooms .Biz li{
-  width: 140px;
-  align-items: center;
-
-}
-
-#OpenRooms ul li{
-  list-style: none;
-  background-color: #967bb6;
-  width: 150px;
-  border: 1px solid white;
-  height:50px;
-  line-height: 50px;
+.ReP{
   text-align: center;
-  float: left;
-  color: white;
-  font-size: 19px;
-  border-radius: 20px;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.ReD{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
+#backBtn{
+  margin-top: 2px;
 }
-.buttons{
-  position: relative;
-  top:110px;
+
+.hidden-default{
+  display: none;
 }
-#Rooms{
-  font-size: 22px;
-  font-weight: bold;
-  ;position: relative;
-  top:5px;
+
+.nice-top-margin{
+  margin-top: 35px;
+}
+
+h5{
+  margin-top:10px;
 }

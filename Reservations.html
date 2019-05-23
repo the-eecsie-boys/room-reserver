@@ -1,23 +1,18 @@
 <html>
 <head class = "header">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="RF.css"/>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="RF.js"></script>
-<title> Room Finder </title>
+  <title> Room Finder </title>
 </head>
 
 <body>
-<div class= "Whole Screen">
-  Your Current Reservations
-  <div class="Reservations">
-    <ul>
-      <li> Room A128 at 6pm on May 26th</li>
-    </ul>
-  </div>
-
+  <h1>Your Reservations</h1>
   <div>
-  <a href="RFHomePage.html">
-    <img class= "backButton" src="Images/back.jpg" alt="Back Button">
-  </a>
+    <p class="ReP" id="theRev"> </p>
   </div>
-</div>
+  <button type="button" class="btn btn-success btn-block" onclick="window.location.href='index.html'">Ok</button>
 </body>

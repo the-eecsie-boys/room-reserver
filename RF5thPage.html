@@ -1,23 +1,50 @@
 <html>
 <head class = "header">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="RF.css"/>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="RF.js"></script>
-<title> Room Finder </title>
+  <title> Room Finder </title>
 </head>
 
 <body>
-<div class= "Whole Screen">
-Reservation Set!
-</div>
-<div>
-Your room *insert room here*
-in wing *insert wing here*
-has been reserved for *insert date*
-at *insert time*
-</div>
-<div>
-  <a href="RFHomePage.html">
-    <img class="checkButton" src="images/checkButton.jpg">
-  </a>
-</div>
+  <h1>Reservation Set!</h1>
+  <div id = "reservedRoom">
+  <div class="card text-white bg-success nice-top-margin">
+    <div class="card-header text-center"><h3 id="roomHeader">A119</h3></div>
+      <div id="roomStats" class="card-body text-center">
+        <h6 class="card-title text-center">1:00pm - 1:50pm</h6>
+        <p class="card-text text-center">5/31/19</p>
+      </div>
+    </div>
+    </div>
+  <div class="ReD">
+    <p class="ReP" id="RoomID"> </p>
+    <p class="ReP" id="DateID">  </p>
+    <p class="ReP" id="TimeID">  </p>
+  </div>
+  <button type="button" class="btn btn-primary btn-block" onclick="changeReservations()">Ok</button>
 </body>
+<script>
+  $(document).ready(function(){
+    $("#roomHeader").html(window.sessionStorage.getItem("reserved_room"));
+    $("#roomStats").html(window.sessionStorage.getItem("reserved_room_stats"));
+    let reservedRoomDiv = `<div class="card text-white bg-success">
+    <div class="card-header text-center">${window.sessionStorage.getItem("reserved_room")}</div>
+      <div id="roomStats" class="card-body text-center">
+        ${window.sessionStorage.getItem("reserved_room_stats")}
+        <p class="card-text text-center">${window.sessionStorage.getItem("reserved_date")}</p>
+      </div>
+    </div>`;
+    
+    if(!window.localStorage.getItem("reserved_rooms")){
+      window.localStorage.setItem("reserved_rooms", reservedRoomDiv);
+    }else{
+       window.localStorage.setItem("reserved_rooms", window.localStorage.getItem("reserved_rooms") +  reservedRoomDiv);
+    }
+    
+  });
+  </script>
+</html>
