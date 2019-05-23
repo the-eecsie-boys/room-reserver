@@ -15,17 +15,20 @@ function setFloor(floorNum){
 
 //trying to have the correct user room on confirmation page (page 5)
 function getRoomNumber(room){
-  document.location.href="RF4thPage.html";
+  window.sessionStorage.setItem("reserved_room", room.innerHTML);
+  window.sessionStorage.setItem("reserved_room_stats", room.parentElement.children[1].innerHTML);
+  document.location.href = "RF4thPage.html";
   document.getElementById("RoomID").innerHTML = "Your rooom, " + room + ", has been reserved";
 }
 
 //trying to have correct time and date on confirmation page (page 5)
 function changeToUserInput(){
+  window.sessionStorage.setItem("reserved_date", document.getElementById('date').value);
+  window.location.href = "RF2ndPage.html";
   var time = document.getElementById('TimeID');
   var date = document.getElementById('DateID');
   var useTime = document.getElementById('time');
   var useDate = document.getElementsById('date');
-
   time.innerHTML = "from " + useTime + " to" + useTime;
   date.innerHTML = "for " + useDate;
 }

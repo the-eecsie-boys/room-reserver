@@ -11,12 +11,14 @@
 
 <body>
   <h1>Reservation Set!</h1>
+  <div id = "reservedRoom">
   <div class="card text-white bg-success nice-top-margin">
-    <div class="card-header text-center"><h3>A119</h3></div>
-      <div class="card-body">
-        <h5 class="card-title text-center">1:00pm - 1:50pm</h5>
+    <div class="card-header text-center"><h3 id="roomHeader">A119</h3></div>
+      <div id="roomStats" class="card-body text-center">
+        <h6 class="card-title text-center">1:00pm - 1:50pm</h6>
         <p class="card-text text-center">5/31/19</p>
       </div>
+    </div>
     </div>
   <div class="ReD">
     <p class="ReP" id="RoomID"> </p>
@@ -25,3 +27,24 @@
   </div>
   <button type="button" class="btn btn-primary btn-block" onclick="changeReservations()">Ok</button>
 </body>
+<script>
+  $(document).ready(function(){
+    $("#roomHeader").html(window.sessionStorage.getItem("reserved_room"));
+    $("#roomStats").html(window.sessionStorage.getItem("reserved_room_stats"));
+    let reservedRoomDiv = `<div class="card text-white bg-success">
+    <div class="card-header text-center">${window.sessionStorage.getItem("reserved_room")}</div>
+      <div id="roomStats" class="card-body text-center">
+        ${window.sessionStorage.getItem("reserved_room_stats")}
+        <p class="card-text text-center">${window.sessionStorage.getItem("reserved_date")}</p>
+      </div>
+    </div>`;
+    
+    if(!window.localStorage.getItem("reserved_rooms")){
+      window.localStorage.setItem("reserved_rooms", reservedRoomDiv);
+    }else{
+       window.localStorage.setItem("reserved_rooms", window.localStorage.getItem("reserved_rooms") +  reservedRoomDiv);
+    }
+    
+  });
+  </script>
+</html>
