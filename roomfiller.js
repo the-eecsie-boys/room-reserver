@@ -54,7 +54,7 @@ var rooms = [
 ]
 
 function availablerooms(){
-  var allrooms = document.getElementById("OpenRooms");
+  var allrooms = document.getElementById("availableRooms");
   allRooms.innerHTML = "";
   if (rooms != null) {
     for (var i=0; i<rooms.length; i++) {

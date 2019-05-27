@@ -13,9 +13,44 @@
 <body class="full-body">
 <div>
   <h1>1st Floor A Wing Rooms</h1>
-
+ 
   <div class="OpenRooms">
     <p style="text-align:center; font-size:130%; cursor:default;"> Select a Room</p>
+    <div style="font-size:90%;" class="form-row">
+      <div class="col">
+        Min Capacity:
+        <select id="minCapacitySelect" class="form-control form-control-sm">
+          <option>--</option>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>50</option>
+        </select>
+      </div>
+      <div class="col">
+        Max Capacity:
+        <select id="maxCapacitySelect" class="form-control form-control-sm">
+          <option>--</option>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>50</option>
+        </select>
+      </div>
+      <div class="col">
+        Name Has:
+        <input type="text" class="form-control form-control-sm" id="nameContainsInput" placeholder="">
+      </div>
+      <div>
+        &nbsp
+        <button type="button" class="btn btn-primary btn-block btn-sm" onclick="availablerooms();"><i class="material-icons">search</i></button>
+      </div>
+      <div id="availableRooms">
+      </div>
+    </div>
+    
     <!-- 
       No longer necessary cu rooms are added by JS :)
     <div class="card text-white bg-primary room-info-wing-closeup">
