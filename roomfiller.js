@@ -12,7 +12,7 @@ var rooms = [
   {
     name: "A116",
     capacity: "35",
-    availability: "1:00pm-2:50pm"
+    availability: "1:00pm-1:50pm"
   },
   {
     name: "A128",
@@ -22,7 +22,7 @@ var rooms = [
   {
     name: "A120",
     capacity: "15",
-    availability: "1:00pm-3:50pm"
+    availability: "1:00pm-1:50pm"
   },
   {
     name: "A134",

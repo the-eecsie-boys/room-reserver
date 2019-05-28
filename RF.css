@@ -63,21 +63,6 @@ h1{
   cursor: default;
 }
 
-.ReP{
-  text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.ReD{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#backBtn{
-  margin-top: 2px;
-}
-
 .hidden-default{
   display: none;
 }
@@ -107,4 +92,8 @@ h5{
 
 #availableRooms{
   width: 100%;
+}
+
+#PreBtn{
+  margin-bottom: 5px;
 }
