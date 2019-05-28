@@ -49,28 +49,26 @@ var rooms = [
     capacity: "15",
     availability: "1:00pm-1:50pm"
   }
-};
+];
 
-]
 
 function availablerooms(){
+  var minCapacity = document.getElementById("minCapacitySelect").value;
+  var maxCapacity = document.getElementById("maxCapacitySelect").value;
+  var nameContains = document.getElementById("nameContainsInput").value;
   var allrooms = document.getElementById("availableRooms");
-  allRooms.innerHTML = "";
+  allrooms.innerHTML = "";
   if (rooms != null) {
     for (var i=0; i<rooms.length; i++) {
-      var cardWrapperHolder = document.createElement('div');
-      cardWrapper.innerHTML = `div class="card text-white bg-primary room-info-wing-closeup">
-      <div class="card-header room-info-wing-closeup-header" onclick="getRoomNumber(this)">${rooms[i].name}</div>
-      <div class="card-body">
-        <h5 class="card-title text-center">Capacity: ${rooms[i].capacity}</h5>
-        <p class="card-text text-center">${rooms[i].availability}</p>
-      </div>`;
-      allrooms.appendChild(cardWrapperHolder);
+      if(rooms[i].name.indexOf(nameContains) > -1 && rooms[i].capacity >= minCapacity && rooms[i].capacity <= maxCapacity){
+        var cardWrapperHolder = `<div class="card text-white bg-primary room-info-wing-closeup">
+        <div class="card-header room-info-wing-closeup-header" onclick="getRoomNumber(this)">${rooms[i].name}</div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Capacity: ${rooms[i].capacity}</h5>
+          <p class="card-text text-center">${rooms[i].availability}</p>
+        </div>`;
+        allrooms.innerHTML = allrooms.innerHTML + cardWrapperHolder;
+      }
     }
   }
-  var buttonHTML = `<div id="backBtn">
-        <button type="button" class="btn btn-primary btn-block" onclick="window.location.href='RF2ndPage.html'">Back</button>
-    </div>`;
-  allRooms.innerHTML = allrooms.innerHTML + buttonHTML;
-
 }

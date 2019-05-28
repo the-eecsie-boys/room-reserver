@@ -6,21 +6,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="RF.js"></script>
+  <script src="roomfiller.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <title> Room Finder </title>
 </head>
 
-<body class="full-body">
+<body class="full-body" onload="availablerooms();">
 <div>
-  <h1>1st Floor A Wing Rooms</h1>
- 
+  <h1><button type="button" onclick="window.location='RF2ndPage.html';" class="btn btn-primary top-back-btn"><i class="material-icons">navigate_before</i></button>1st Floor A Wing Rooms</h1>
   <div class="OpenRooms">
     <p style="text-align:center; font-size:130%; cursor:default;"> Select a Room</p>
     <div style="font-size:90%;" class="form-row">
       <div class="col">
         Min Capacity:
         <select id="minCapacitySelect" class="form-control form-control-sm">
-          <option>--</option>
           <option>10</option>
           <option>20</option>
           <option>30</option>
@@ -31,23 +30,22 @@
       <div class="col">
         Max Capacity:
         <select id="maxCapacitySelect" class="form-control form-control-sm">
-          <option>--</option>
-          <option>10</option>
-          <option>20</option>
-          <option>30</option>
-          <option>40</option>
           <option>50</option>
+          <option>40</option>
+          <option>30</option>
+          <option>20</option>
+          <option>10</option>
         </select>
       </div>
       <div class="col">
         Name Has:
         <input type="text" class="form-control form-control-sm" id="nameContainsInput" placeholder="">
       </div>
-      <div>
+      <div class="right-padding">
         &nbsp
         <button type="button" class="btn btn-primary btn-block btn-sm" onclick="availablerooms();"><i class="material-icons">search</i></button>
       </div>
-      <div id="availableRooms">
+      <div id="availableRooms" class="avail-rooms">
       </div>
     </div>
     
