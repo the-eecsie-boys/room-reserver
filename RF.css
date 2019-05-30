@@ -42,8 +42,8 @@ h1{
 }
 
 .room-info-wing-closeup{
-  width: 47%;
-  margin: 1px;
+  width: 48.5%;
+  margin: 0.73%;
   display: inline-block;
 }
 
@@ -63,21 +63,6 @@ h1{
   cursor: default;
 }
 
-.ReP{
-  text-align: center;
-  font-size: 25px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.ReD{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#backBtn{
-  margin-top: 2px;
-}
-
 .hidden-default{
   display: none;
 }
@@ -88,4 +73,27 @@ h1{
 
 h5{
   margin-top:10px;
+}
+
+.top-back-btn{
+  float:left;
+  margin-left:15px;
+  margin-top:7px;
+}
+
+.avail-rooms{
+  overflow-y: scroll;
+  height: 70.3vh;
+}
+
+.right-padding{
+  padding-right: 3px;
+}
+
+#availableRooms{
+  width: 100%;
+}
+
+#PreBtn{
+  margin-bottom: 5px;
 }

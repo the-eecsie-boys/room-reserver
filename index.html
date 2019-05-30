@@ -25,15 +25,9 @@
   </form>
   <p>Already made a reservation?</p>
   <button type="button" class="btn btn-primary btn-block" onclick="window.location.href = 'Reservations.html'">View Previous Reservations</button>
-  
+
 </body>
+
   
-  <script>
-    $(document).ready(function(){
-      if(window.localStorage.getItem("reserved_rooms")){
-        document.body.innerHTML = document.body.innerHTML += "<h5 class='text-center'>Reserved Rooms:</h5>" +  window.localStorage.getItem("reserved_rooms");
-      }
-    });
-  </script>
-  
+
 </html>

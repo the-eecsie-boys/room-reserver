@@ -20,11 +20,6 @@
       </div>
     </div>
     </div>
-  <div class="ReD">
-    <p class="ReP" id="RoomID"> </p>
-    <p class="ReP" id="DateID">  </p>
-    <p class="ReP" id="TimeID">  </p>
-  </div>
   <button type="button" class="btn btn-primary btn-block" onclick="changeReservations()">Ok</button>
 </body>
 <script>
@@ -38,13 +33,13 @@
         <p class="card-text text-center">${window.sessionStorage.getItem("reserved_date")}</p>
       </div>
     </div>`;
-    
+
     if(!window.localStorage.getItem("reserved_rooms")){
       window.localStorage.setItem("reserved_rooms", reservedRoomDiv);
     }else{
        window.localStorage.setItem("reserved_rooms", window.localStorage.getItem("reserved_rooms") +  reservedRoomDiv);
     }
-    
+
   });
   </script>
 </html>
