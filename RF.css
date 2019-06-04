@@ -35,11 +35,26 @@ h1{
   margin-top: 30px;
 }
 
-.CloseMapPic{
-  width: 45%;
-  float: right;
-  margin-right: 23%;
+#CloseMapPic{
+  width: 72%;
 }
+
+.img-magnifier-container {
+  position:relative;
+  float:right;
+  width: 65%;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 20%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 125px;
+  height: 125px;
+}
+
 
 .room-info-wing-closeup{
   width: 48.5%;
