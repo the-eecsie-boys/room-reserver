@@ -10,8 +10,11 @@
 <title> Room Finder </title>
 </head>
 
-<body>
-  <div class="dropdown">
+<body class="full-body">
+  <button type="button" style="margin-left:1vw;" onclick="window.location='index.html';" class="btn btn-primary back-btn"><i class="material-icons" >navigate_before</i></button>
+  <button type="button" style="margin-right:1vw;" onclick="window.location='RF3rdPage.html';" class="btn btn-primary next-btn"><i class="material-icons">navigate_next</i></button>
+  <div style="display:inline-block;width:45%;margin-left:21.5vw;">
+    <div class="dropdown" style="display:inline-block;width:auto;height:auto;">
     <button class="btn btn-primary dropdown-toggle floor-select" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Floor
     </button>
@@ -23,11 +26,20 @@
       <a class="dropdown-item" onclick="setFloor(4);">4</a>
     </div>
   </div>
-  
-  <div id="maps-div" class="Maps">
-
-    <p class="maps_placeholder">Please select a floor above.</p>
-
+    <button class="btn btn-primary" onclick="window.location = 'Available.html';" type="button" style="float:right; margin-top:10px;margin-bottom:10px;" id="viewAllRoomsButton">
+        All Availabilities
+      </button>
   </div>
+  <div class="mini-body">
+  
+    <div id="maps-div" class="Maps">
 
+      <p class="maps_placeholder">Please select a floor above, or use click "All Availabilities" to view all the available rooms right now.</p>
+
+    </div>
+  </div>
 </body>
+
+
+     
+  

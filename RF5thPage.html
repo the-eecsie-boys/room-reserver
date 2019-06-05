@@ -12,7 +12,7 @@
 <body>
   <h1>Reservation Set!</h1>
   <div id = "reservedRoom">
-  <div class="card text-white bg-success nice-top-margin">
+  <div style="margin-bottom:7px;" class="card text-white bg-success nice-top-margin">
     <div class="card-header text-center"><h3 id="roomHeader">A119</h3></div>
       <div id="roomStats" class="card-body text-center">
         <h6 class="card-title text-center">1:00pm - 1:50pm</h6>
@@ -26,9 +26,9 @@
   $(document).ready(function(){
     $("#roomHeader").html(window.sessionStorage.getItem("reserved_room"));
     $("#roomStats").html(window.sessionStorage.getItem("reserved_room_stats"));
-    let reservedRoomDiv = `<div class="card text-white bg-success">
+    let reservedRoomDiv = `<div style="margin-bottom:7px;" class="card text-white bg-success">
     <div class="card-header text-center">${window.sessionStorage.getItem("reserved_room")}</div>
-      <div id="roomStats" class="card-body text-center">
+      <div id="roomStats" style="padding:10px;" class="card-body text-center">
         ${window.sessionStorage.getItem("reserved_room_stats")}
         <p class="card-text text-center">${window.sessionStorage.getItem("reserved_date")}</p>
       </div>

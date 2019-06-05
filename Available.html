@@ -1,27 +1,52 @@
 <html>
-<header>
-
+<head class = "header">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="RF.css"/>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="RF.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- Took every reference from RF4thPage  -->
-
   <script src="roomfiller.js"></script>
-  <title>All Available Rooms</title>
+  <script src="RF3rdPage.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-</header>
+  <title> Room Finder </title>
+</head>
 
-<body>
-<div id="available-rooms">
-</div>
+<body onload="populateAllAvailabilities();">
+  <h1><button type="button" onclick="window.location='RF2ndPage.html';" class="btn btn-primary top-back-btn"><i class="material-icons">navigate_before</i></button>All Available Rooms</h1>
+    <p style="text-align:center; font-size:130%; cursor:default;"> Select a Room</p>
+    <div style="font-size:90%;margin-bottom:5px;" class="form-row">
+      <div class="col">
+        Min Capacity:
+        <select id="minCapacitySelect" class="form-control form-control-sm">
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>50</option>
+        </select>
+      </div>
+      <div class="col">
+        Max Capacity:
+        <select id="maxCapacitySelect" class="form-control form-control-sm">
+          <option>50</option>
+          <option>40</option>
+          <option>30</option>
+          <option>20</option>
+          <option>10</option>
+        </select>
+      </div>
+      <div class="col">
+        Room Name:
+        <input type="text" class="form-control form-control-sm" id="nameContainsInput" placeholder="">
+      </div>
+      <div class="right-padding">
+        &nbsp
+        <button type="button" class="btn btn-primary btn-block btn-sm" onclick="populateAllAvailabilities();"><i class="material-icons">search</i></button>
+      </div>
+    </div>
+    <div id="availableRooms" class="avail-rooms">
+    </div>
 </body>
-
-<script>
-  availablerooms();
-</script>
-
 </html>

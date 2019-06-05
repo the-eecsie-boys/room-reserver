@@ -14,11 +14,10 @@
 </head>
 
 <body class="full-body" onload="availablerooms();">
-<div>
   <h1><button type="button" onclick="window.location='RF2ndPage.html';" class="btn btn-primary top-back-btn"><i class="material-icons">navigate_before</i></button>1st Floor A Wing Rooms</h1>
   <div class="OpenRooms">
     <p style="text-align:center; font-size:130%; cursor:default;"> Select a Room</p>
-    <div style="font-size:90%;" class="form-row">
+    <div style="font-size:90%;margin-bottom:5px;" class="form-row">
       <div class="col">
         Min Capacity:
         <select id="minCapacitySelect" class="form-control form-control-sm">
@@ -47,17 +46,15 @@
         &nbsp
         <button type="button" class="btn btn-primary btn-block btn-sm" onclick="availablerooms();"><i class="material-icons">search</i></button>
       </div>
-      <div id="availableRooms" class="avail-rooms">
-      </div>
     </div>
-
-
+    <div id="availableRooms" class="avail-rooms">
+    </div>
   </div>
   <div class="img-magnifier-container">
     <img id="CloseMapPic" src="images/AD1st.png" alt="tech maps" style="width:lwpx; height:lhpx;">
   </div>
   <script>
-    magnify("CloseMapPic",1.75);
+    magnify("CloseMapPic", 3.75);
   </script>
 </body>
 </html>
