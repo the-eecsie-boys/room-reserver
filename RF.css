@@ -9,6 +9,12 @@ body{
   width: 100%;
 }
 
+.mini-body{
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
 h1{
   text-align: center;
 }
@@ -24,9 +30,16 @@ h1{
   margin-top: 30px;
 }
 
+.back-btn{
+  margin-top: 10px;
+  width: 5vw;
+  float: left;
+}
+
 .next-btn{
   margin-top: 10px;
   float: right;
+  width: 5vw;
 }
 
 .maps_placeholder{
@@ -35,14 +48,35 @@ h1{
   margin-top: 30px;
 }
 
-.CloseMapPic{
-  width: 45%;
-  float: right;
-  margin-right: 23%;
+#CloseMapPic{
+  width: 72%;
 }
+
+.img-magnifier-container {
+  position:relative;
+  float:right;
+  width: 65%;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 20%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 125px;
+  height: 125px;
+}
+
 
 .room-info-wing-closeup{
   width: 48.5%;
+  margin: 0.73%;
+  display: inline-block;
+}
+
+.room-info-wing-closeup-all{
+  width: 31.73%;
   margin: 0.73%;
   display: inline-block;
 }
@@ -77,8 +111,9 @@ h5{
 
 .top-back-btn{
   float:left;
-  margin-left:15px;
-  margin-top:7px;
+  margin-left:1vw;
+  margin-top:10px;
+  width: 5vw;
 }
 
 .avail-rooms{

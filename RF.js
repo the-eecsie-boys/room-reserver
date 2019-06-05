@@ -6,10 +6,10 @@ function setFloor(floorNum){
                       <area shape="rect" coords="0,403,230,638" href="RF3rdPage.html" alt="Wing A">
                    </map>`;
   }
-  mapDivHTML += `
+  /*mapDivHTML += `
         <button type="button" onclick="window.location='index.html';" class="btn btn-primary back-btn"><i class="material-icons" >navigate_before</i></button>
         <button type="button" onclick="window.location='RF3rdPage.html';" class="btn btn-primary next-btn"><i class="material-icons">navigate_next</i></button>
-      `;
+      `;*/
   document.getElementById("maps-div").innerHTML = mapDivHTML;
 }
 
@@ -23,6 +23,7 @@ function getRoomNumber(room){
 //trying to have correct time and date on confirmation page (page 5)
 function changeToUserInput(){
   window.sessionStorage.setItem("reserved_date", document.getElementById('date').value);
+  window.sessionStorage.setItem("reserved_time", document.getElementById('time').value);
   window.location.href = "RF2ndPage.html";
 }
 
